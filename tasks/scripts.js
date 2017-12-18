@@ -7,6 +7,7 @@ import browserify from 'browserify'
 import babel from 'babelify'
 import util from 'gulp-util'
 import strip_debug from 'gulp-strip-debug'
+import rename from 'gulp-rename'
 import handle_errors from '../util/handle_errors'
 
 
@@ -30,6 +31,13 @@ export default () => {
     if ( global.config.production ) {
         task = task
             .pipe( strip_debug() )
+            .pipe( rename( function ( path ) {
+                path.basename += '-unminified'
+            } ) )
+            .pipe( gulp.dest( global.config.build ) )
+            .pipe( rename( function ( path ) {
+                path.basename = path.basename.replace( '-unminified', '' )
+            } ) )
             .pipe( uglify() )
 
     } else {
