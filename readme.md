@@ -21,7 +21,7 @@ Create file called `./babelrc`
 **Step 4:**
 Run 
 ```
-npm i --save babel-preset-env babelify browser-sync browserify defaults-deep gulp-autoprefixer gulp-buffer gulp-clean-css gulp-error-handle gulp-replace gulp-sort gulp-sourcemaps gulp-strip-debug gulp-stylus gulp-tap gulp-uglify gulp-wp-pot gulp-zip node-notifier run-sequence yamljs gulp-prompt
+npm i --save babel-preset-env babelify browser-sync browserify defaults-deep gulp-autoprefixer gulp-buffer gulp-clean-css gulp-error-handle gulp-replace gulp-sort gulp-sourcemaps gulp-strip-debug gulp-stylus gulp-tap gulp-uglify gulp-wp-pot gulp-zip node-notifier run-sequence yamljs gulp-prompt run-sequence gulp-rename gulp-replace gulp-prompt gulp-sort 
 ```
 
 **Step 5:**
